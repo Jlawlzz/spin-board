@@ -3,8 +3,8 @@ $(document).ready(function(){
   $('#sortAlphebetically').on('click', function(){
     sortListAlphebetically()
   })
-
 })
+
 
 function sortListAlphebetically(){
   $("#links-list .link_item").sort(function (a, b) {
@@ -16,6 +16,7 @@ function sortListAlphebetically(){
 
   })
 }
+
 
 function rankListItem(a, b){
   if ($(a).children('.title').text().toLowerCase() > $(b).children('.title').text().toLowerCase()){
