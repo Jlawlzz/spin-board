@@ -1,0 +1,11 @@
+<%= simple_form_for @link, url: "/links/#{@link.id}", method: :patch do |f| %>
+
+  <%= f.label :title, "link title" %>
+  <%= f.text_field :title, value: "#{@link.title}" %>
+
+  <%= f.label :link_url, "link url" %>
+  <%= f.text_field :link_url, value: "#{@link.link_url}" %>
+
+  <%= f.submit "update link" %>
+
+<% end %>
