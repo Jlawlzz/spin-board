@@ -15,6 +15,8 @@ gem 'responders'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'validate_url'
 gem "simple_form"
+gem 'validate_url'
+
 
 
 
@@ -27,6 +29,9 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'mocha'
   gem 'minitest-reporters'
+  gem 'selenium-webdriver'
+  gem 'launchy'
+
 end
 
 group :development do

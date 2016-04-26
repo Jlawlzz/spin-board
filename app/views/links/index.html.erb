@@ -1,0 +1,14 @@
+<%= simple_form_for :link, url: links_path, method: :post do |f| %>
+
+  <%= f.label :title, "link title" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :link_url, "link url" %>
+  <%= f.text_field :link_url %>
+
+  <%= f.submit "submit new link" %>
+
+<% end %>
+
+<div id='links-list'>
+</div>

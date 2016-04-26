@@ -12,6 +12,8 @@ end
 
 class ActionDispatch::IntegrationTest
   def teardown
+    Capybara.reset_sessions!
+    Capybara.use_default_driver
     reset_session!
   end
 
