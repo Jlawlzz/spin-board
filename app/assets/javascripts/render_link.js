@@ -1,9 +1,9 @@
 function renderLink(link) {
   $('#links-list').prepend(
-     `<div class='link' id=${link.id}>
+     `<div class='link_item' id=${link.id}>
         <h2 class='title'>${link.title}</h2>
         <h2 class='url'>${link.link_url}</h2>
-        <button id='read-${link.id}'>${readStatus(link.read_status)}</button>
+        <button class='read-status' id='read-${link.id}'>${readStatus(link.read_status)}</button>
         <a href="/links/${link.id}/edit">Edit Link</a>
       </div>`
   );
