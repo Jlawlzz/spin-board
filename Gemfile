@@ -29,6 +29,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'mocha'
   gem 'minitest-reporters'
+  gem 'minitest-capybara'
   gem 'selenium-webdriver'
   gem 'launchy'
 

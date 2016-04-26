@@ -4,13 +4,12 @@ class LinksController < ApplicationController
   end
 
   def create
-    binding.pry
     current_user.links << Link.create(link_params)
     redirect_to links_path
   end
 
   def link_params
-    params.require(:link).permit(:title, :link_url)
+    params.require(:link).permit(:title, :link_url, :viewed)
   end
 
 end
