@@ -6,8 +6,11 @@
   <%= f.label :email, "email" %>
   <%= f.text_field :email %>
 
-  <%= f.label :password_digest, "password" %>
-  <%= f.password_field :password_digest %>
+  <%= f.label :password, "password" %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation, "password confirmation" %>
+  <%= f.password_field :password_confirmation %>
 
   <%= f.submit "create account" %>
 

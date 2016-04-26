@@ -6,19 +6,25 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-      if @user.save
-        session[:user_id] = @user.id
-        redirect_to links_path
-      else
-        redirect_to signup_path
-      end
+    user_create(@user)
   end
 
   private
 
   def user_params
     params.require(:user).permit(:username,
-                                 :password_digest,
+                                 :password,
+                                 :password_confirmation,
                                  :email)
   end
+
+  def user_create(user)
+    if user.save
+      session[:user_id] = user.id
+      redirect_to links_path
+    else
+      redirect_to signup_path
+    end
+  end
+
 end

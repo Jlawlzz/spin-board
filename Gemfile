@@ -14,6 +14,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'responders'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'validate_url'
+gem "simple_form"
+
 
 
 # Use Capistrano for deployment
