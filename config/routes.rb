@@ -8,13 +8,15 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
-  resources :links, only: [:index, :create]
+  get '/links/:id/edit', to: 'links#edit'
+
+  resources :links, only: [:index, :create, :update]
 
   resources :sessions, only: [:create]
 
   namespace :api do
     namespace :v1, defaults: {format: :json} do
-      resources :links, only: [:create, :index, :update]
+      resources :links, only: [:create, :index]
     end
   end
 
