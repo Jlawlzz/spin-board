@@ -16,6 +16,8 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'validate_url'
 gem "simple_form"
 gem 'validate_url'
+gem 'faraday'
+gem 'faker'
 
 
 

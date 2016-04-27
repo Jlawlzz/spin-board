@@ -7,13 +7,17 @@ class Api::V1::LinksController < ApplicationController
   end
 
   def update
-    redirect_to links_path
+    link = current_user.links.find(params[:id])
+    link.update_attributes(link_params)
+
+    redirect_to '/links_index'
+
   end
 
   private
 
   def link_params
-    params.require(:link).permit(:title, :link_url)
+    params.permit(:read_status)
   end
 
 end

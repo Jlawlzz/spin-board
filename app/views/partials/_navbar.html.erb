@@ -2,8 +2,10 @@
   <% if (current_user) %>
     <%= "you are logged in as: #{current_user.username}"%>
   </br>
+  </br>
     <%= simple_form_for :logout, url: logout_path, method: :delete do |f| %>
       <%= f.submit 'sign out' %>
     <% end %>
   <% end %>
+</br>
 </div>

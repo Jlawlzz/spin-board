@@ -1,13 +1,12 @@
 class LinksController < ApplicationController
 
   before_action :authorize
-  
+
   def index
   end
 
   def create
-    current_user.links << Link.create(link_params)
-    redirect_to links_path
+    create_link(params)
   end
 
   def edit
@@ -20,8 +19,19 @@ class LinksController < ApplicationController
     redirect_to links_path
   end
 
-  def link_params
-    params.require(:link).permit(:title, :link_url)
+  private
+
+  def link_params(params, url_data)
+    params_hash = params.require(:link).permit(:title, :link_url)
+    params_hash[:url_title] = url_data[:title]
+    params_hash[:url_h1] = url_data[:url_h1]
+    params_hash
+  end
+
+  def create_link(params)
+    url_data = UrlHelper.get_summary(params[:link][:link_url])
+    current_user.links << Link.create(link_params(params, url_data))
+    redirect_to links_path
   end
 
 end
