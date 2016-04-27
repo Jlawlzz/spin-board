@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UserCanSignUpTest < ActionDispatch::IntegrationTest
+class UserCanSignInTest < ActionDispatch::IntegrationTest
 
   test 'user can sign in' do
 

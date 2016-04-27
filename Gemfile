@@ -34,6 +34,7 @@ group :development, :test do
   gem 'minitest-capybara'
   gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'minitest-stub_any_instance'
 
 end
 
