@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20160426160311) do
   create_table "links", force: :cascade do |t|
     t.string   "link_url"
     t.string   "title"
+    t.string   "url_title"
+    t.string   "url_h1"
     t.binary   "read_status", default: "false"
     t.integer  "user_id"
     t.datetime "created_at",                    null: false

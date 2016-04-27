@@ -23,6 +23,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to links_path
     else
+      flash[:error] = "you dunce! something went wrong!" 
       redirect_to signup_path
     end
   end
